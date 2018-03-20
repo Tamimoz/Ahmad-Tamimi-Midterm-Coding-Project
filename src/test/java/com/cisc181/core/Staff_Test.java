@@ -64,6 +64,7 @@ public class Staff_Test {
 
 	}
 	
+	
 	@Test (expected = PersonException.class)//Test to see if the PersonException is thrown for putting a phone number that is not in the form (###)-###-####.
 	public void testForPersonException_InvalidPhoneNumber() throws PersonException{
 		String invalid_phone_number = "(123)456-789";

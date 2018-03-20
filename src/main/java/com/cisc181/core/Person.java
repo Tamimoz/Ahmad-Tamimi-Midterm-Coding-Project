@@ -64,7 +64,7 @@ public abstract class Person implements java.io.Serializable {
 	}
 
 	public void setPhone(String newPhone_number) throws PersonException {
-		String regex = "^\\(([0-9]{3})\\)[-.\\s]([0-9]{3})[-.\\s]([0-9]{4})$";
+		String regex = "^\\(([0-9]{3})\\)[-]([0-9]{3})[-]([0-9]{4})$";
 		 
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(newPhone_number);
@@ -114,7 +114,7 @@ public abstract class Person implements java.io.Serializable {
 			throw new PersonException("Date of birth entered is more than 100 years older than today's date.", this);
 		}
 		
-		String regex = "^\\(([0-9]{3})\\)[-.\\s]([0-9]{3})[-.\\s]([0-9]{4})$";
+		String regex = "^\\(([0-9]{3})\\)[-]([0-9]{3})[-]([0-9]{4})$";
 		 
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(Phone_number);
@@ -161,6 +161,7 @@ public abstract class Person implements java.io.Serializable {
 		System.out.println("age is " + age);
 
 		return age;
+		
 
 	}
 }
